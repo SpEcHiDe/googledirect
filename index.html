@@ -1,48 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Rendered with Eco -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name='apple-mobile-web-app-capable' content='yes' />
 
-  <!-- Site Properities -->
-  <title>Google Direct</title>
-  <meta name="description" content="Use Google to download books, videos, songs" />
-  <meta name="keywords" content="download,ebooks,songs,videos" />
+    <!-- Site Properities -->
+    <title>Google Direct</title>
+    <meta name="description" content="Use Google to download books, videos, songs" />
+    <meta name="keywords" content="download,ebooks,songs,videos" />
 
-  <!-- DocPad Meta -->
-  <meta name="generator" content="DocPad v6.56.0" />
-
-  <!-- DocPad Styles + Our Own -->
-  <link  rel="stylesheet" href="main.css" />
-</head>
-<body>
+    <!-- DocPad Styles + Our Own -->
+    <link  rel="stylesheet" href="//projects.shrimadhavuk.me/css/bootstrap.css" />
+    <link  rel="stylesheet" href="main.css" />
+  </head>
+  <body>
     <header>
-	<h1>Google Direct</h1>
-</header>
-<article>
-<form id="search">
-	<div>
-		<input id="query" type="text" />
-	</div>
-	<div class="searchbutton">
-		<button type="submit">Search using Google direct</button>
-	</div>
-	<div>
+  	   <h2 class="text-center">Google Direct</h1>
+     </header>
+     <article class="container">
+       <form method="POST" id="search" onsubmit="doSearch(document.getElementById('query').value); return false;">
+  	      <div>
+  		        <input class="form-control" id="query" type="text" />
+  	      </div>
+  	      <div class="searchbutton">
+  		         <button class="form-control" type="submit">Search using Google direct</button>
+  	      </div>
+          <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
 
-	</div>
-</form>
-</article>
-<footer>
-<div class="aboutbutton">
-	<button type="button" id="aboutbutton">About</button>
-</div>
-<div id="abouttext">
-	<p>Google Direct is a tool that allows you to easily search misplaced files on the internet. It was developed by Akshay S Dinesh, inspired by <a href="http://www.quora.com/What-can-I-learn-right-now-in-10-minutes-that-will-be-useful-for-the-rest-of-my-life/answer/Shibu-Lijack">this answer on quora</a>. This site is built by following <a href="https://developer.mozilla.org/en/docs/">Mozilla developer docs</a> and hosted on <a href="https://github.com">github</a>.</p>
-</div>
-</footer>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
+      </article>
+      <footer class="fixedlocation">
+        <div class="aboutbutton">
+  	       <button class="form-control" type="button" id="aboutbutton">About</button>
+        </div>
+        <div id="abouttext">
+  	       <p>
+             Google Direct is a tool that allows you to easily search misplaced files on the internet.
+             <br>
+             It was developed by Akshay S Dinesh, inspired by
+             <a href="http://www.quora.com/What-can-I-learn-right-now-in-10-minutes-that-will-be-useful-for-the-rest-of-my-life/answer/Shibu-Lijack">
+               this answer on quora
+             </a>.
+             This site is built by following
+             <a href="https://developer.mozilla.org/en/docs/">
+               Mozilla developer docs
+             </a>
+             and hosted on
+             <a href="https://github.com">
+               GitHub
+             </a>
+           </p>
+        </div>
+      </footer>
 
-  <!-- DocPad Scripts + Our Own -->
-  <script defer="defer"  src="main.js"></script>
-</body>
+      <!-- DocPad Scripts + Our Own -->
+      <script defer="defer"  src="main.js"></script>
+  </body>
 </html>

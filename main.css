@@ -1,25 +1,3 @@
-/**
- * CSS for Google Direct
- */
-
-h1{
-	text-align: center;
-	
-	font-size: 6em;
-}
-
-form {
-    /* Just to center the form on the page */
-    /*
-    margin: 0 auto;
-    width: 600px;
-    */
-    text-align: center;
-    /* To see the outline of the form */
-    padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
-}
 
 form div + div {
     margin-top: 1em;
@@ -39,7 +17,7 @@ input, textarea {
 
     /* To give the same size to all text field */
     width:70%;
-    
+
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 
@@ -47,24 +25,19 @@ input, textarea {
     border: 1px solid #999;
 }
 
-@media all and (min-width: 600px){
-    	input, textarea{
-    		width: 300px;
-    	}
-	}
-
-input:focus, textarea:focus {
-    /* To give a little highlight on active elements */
-    border-color: #000;
-}
-
-footer{
-	text-align: center;
-}
 #abouttext{
 	visibility: hidden;
 }
-
-.aboutbutton {
-	margin-top: 100px;
+.fixedlocation {
+  z-index: 512;
+  /* always stay on top */
+  position: fixed;
+  background: none repeat scroll 0% 0% rgba(0, 0, 0, 0.8);
+  color: #fff;
+  width: 100%;
+  left: 0em;
+	bottom: 0em;
+  padding: 1em;
+  text-align: center;
+  opacity: 0.8;
 }
