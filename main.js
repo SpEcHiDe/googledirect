@@ -36,13 +36,17 @@ var doSearch = function(query){
 
 // DO NOT EDIT BELOW THIS LINE
 function toggleAbout(e){
-	if (e.preventDefault) e.preventDefault();
+	if (e.preventDefault){
+    e.preventDefault();
+  }
 	abouttext.style.visibility = abouttext.style.visibility == "hidden" ? "visible" : "hidden";
 	return false;
 }
+
 var abouttext=document.getElementById("abouttext");
 abouttext.style.visibility="hidden";
 var aboutbutton = document.getElementById('aboutbutton');
+
 if (aboutbutton.attachEvent) {
     aboutbutton.attachEvent("click", toggleAbout);
 } else {
