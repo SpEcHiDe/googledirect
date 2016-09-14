@@ -20,10 +20,25 @@
   	   <h2 class="text-center">Google Direct</h1>
      </header>
      <article class="container">
-       <form method="POST" id="search" onsubmit="doSearch(document.getElementById('query').value); return false;">
-  	      <div>
-  		        <input class="form-control" id="query" type="text" />
-  	      </div>
+       <form method="POST" id="search" onsubmit="doSearch(document.getElementById('query').value, document.getElementById('search_type').value); return false;">
+
+          <div class="form-group">
+            <div class="input-group">
+              <span class="input-group-addon">
+                <label for="query">
+                  <select class="formcontrol" id="search_type">
+                    <option value="NA"> --- </option>
+                    <option value="epub|pdf|djvu">electronic books</option>
+                    <option value="ogg|mp3">songs</option>
+                    <option value="mkv|mp4|avi">videos</option>
+                  </select>
+                </label>
+              </span>
+              <input class="form-control" id="query" type="text" />
+              <span class="help-block"></span>
+            </div>
+          </div>
+
   	      <div class="searchbutton">
   		         <button class="form-control" type="submit">Search using Google direct</button>
   	      </div>

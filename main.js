@@ -1,7 +1,7 @@
 var CORS_URL = "https://projects.shrimadhavuk.me/tracker/cors.php";
 
 var G_SEARCH_URL = "https://www.google.com/search?q=";
-var G_OPT_PARAMS = "-inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)";
+var G_OPT_PARAMS = "-inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" ";
 
 var FetchData = function(type, URL, formData, callBack){
   // create a XHR object
@@ -27,11 +27,12 @@ var FetchData = function(type, URL, formData, callBack){
   }
 };
 
-var doSearch = function(query){
-	var theurl = encodeURIComponent(G_SEARCH_URL + encodeURIComponent(query) + " " + G_OPT_PARAMS);
-	FetchData("POST", CORS_URL + "?q=" + theurl, "", function(response){
-		console.log(response);
-	});
+var doSearch = function(query, search_type){
+	var theurl = encodeURIComponent(G_SEARCH_URL + encodeURIComponent(query) + " " + G_OPT_PARAMS + "(" + search_type + ")");
+	// FetchData("POST", CORS_URL + "?q=" + theurl, "", function(response){
+	// 	console.log(response);
+	// });
+  window.open(decodeURIComponent(theurl));
 };
 
 // DO NOT EDIT BELOW THIS LINE
